@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+}
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+/*inline-block layout css*/
+.inline-display {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+}
+.inline-display .item {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px;
+    width: 150px;
+}
+/*flex layout css*/
+.flex-display {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 90%;
+    border: 1px solid #ddd;
+    content: icon;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+.flex-row div {
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+/*grid layout css*/
+.grid-display {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 20px auto;
+    width: 90%;
+    background-color: #e3f2fd;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.grid-display div {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #888;
+}
+/*table layout css*/
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+th {
+    background-color: #89af4c;
+    color: white;
+}
+td {
+    background-color: #fff;
+}
+

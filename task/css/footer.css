@@ -1,0 +1,154 @@
+.footer {
+    width: 100%;
+    background-color: #02033b;
+    padding: 50px 0;
+}
+
+.footer-container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer h3, footer h2 {
+    margin-bottom: 30px;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.footer ul li, .footer p {
+    margin-bottom: 30px;
+}
+
+.footer ul.inline li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.footer-menu a {
+    color: #f9c13a;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #dca32f;
+}
+
+.footer-left {
+    padding-bottom: 50px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    text-decoration: underline;
+}
+
+.footer-left a {
+    color: white;
+}
+
+/* Social Media Icons */
+.social-links img {
+    width: 24px;
+    height: 24px;
+    margin-right: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+    opacity: 0.8;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background-color: #f9c13a;
+    color: #0b0c2c;
+    padding: 40px;
+    border-radius: 25px;
+    position: relative; 
+    width: 420px;
+}
+
+.newsletter-image {
+    position: absolute;
+    top: 5px;
+    justify-content: center;
+    width: 350px; 
+    height: 95%;
+    z-index: 1; 
+    opacity: 0.8; 
+}
+
+.box-content {
+    position: relative; 
+    z-index: 2; 
+    color: #0b0c2c; 
+}
+
+.newsletter p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    z-index: 1; 
+}
+
+.newsletter form {
+    display: flex;
+    gap: 0px;
+}
+
+.newsletter input,
+.newsletter button {
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+.newsletter input {
+    flex: 1;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.newsletter button {
+    background-color: #0b0c2c;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background-color: #aaa;
+    color: #fff;
+}
+
+.footer-disclaimer {
+    width: 45%;
+    font-size: 12px;
+    line-height: 1.6;
+    color:white;
+    padding-top: 20px;
+}

@@ -1,0 +1,237 @@
+.full-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 50px;
+    width: 1270px;
+}
+
+.full-set {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 80px;
+}
+
+.full-set h1 {
+    font-size: 3.5rem;
+    color: #091133;
+    margin-bottom: 30px;
+}
+
+.full-set p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.button-link {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.button-link.primary-btn {
+    background-color: #ffb700;
+    color: #02033B;
+}
+
+.button-link.secondary-btn {
+    background-color: #ffffff;
+    color: #02033B;
+    border: 1px solid #02033B;
+}
+
+.pic-section {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.pic-section .main-image {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.pic-section .overlay-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 95%;
+    height: auto;
+    z-index: 2;
+    opacity: 1;
+}
+.second-container {
+    background-image: linear-gradient(120deg, #FFC247, #ffc95d);
+    height: 650px;
+}
+
+
+.cards-section {
+    padding: 50px 80px;
+    color: #000;
+    position: absolute;
+}
+
+.cards-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 25px;
+    padding: 20px;
+    max-width: 350px;
+    box-shadow: 10px 4px 10px rgba(87, 72, 0, 0.1);
+    text-align: left;
+}
+
+.card p {
+    font-size: 15px;
+    margin: 15px 15px;
+    line-height: 1.5;
+    color: #02033B;
+}
+
+.card strong {
+    font-size: 0.9rem;
+    margin: 10px 15px;
+    color: #02033B;
+}
+
+.featured-logos {
+    display: flex;
+    margin-left: 20px;
+    gap: 50px;
+}
+
+.featured-logos h3 {
+    font-size: 1.2rem;
+    margin-top: 25px;
+    padding-right: 40px;
+    color: #000;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logos img {
+    max-height: 75px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.certo {
+    background-color: white;
+    width: 100%;
+    height: 600px;
+    margin-top: 0;
+    color: #02033B;
+}
+
+.certo-container {
+    display: flex;
+    padding: 80px 150px 80px 200px;
+}
+
+.certo-container img {
+    width: 300px;
+    margin-left: 180px;
+}
+
+.certo-container h1,
+.certo-container p {
+    padding-bottom: 40px;
+}
+
+.certo-container h1 {
+    font-size: 35px;
+}
+
+.certo-container p {
+    font-size: 20px;
+}
+
+.button-container button {
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.one {
+    background-color: #FFC247;
+    border: none;
+}
+
+.two {
+    background-color: white;
+    border: 1.5px solid #02033B;
+}
+
+.image-container {
+    padding-left: 70px;
+    width: 400px;
+    /* Set the width of the container */
+    height: 400px;
+    /* Set the height of the container */
+    position: relative;
+}
+
+.image1,
+.image2 {
+    position: absolute;
+    /* Enables overlapping */
+    width: 100%;
+    /* Make the images fit the container */
+    height: 100%;
+    background-size: cover;
+    /* Ensures the image covers the div without stretching */
+    background-repeat: no-repeat;
+}
+
+.image1 {
+    background-image: url('../images/image1.png');
+    width: 350px;
+    height: 350px;
+    background-size: cover;
+    z-index: 1;
+}
+
+.image2 {
+    background-image: url('../images/image2.png');
+    width: 330px;
+    height: 330px;
+    background-size: cover;
+    z-index: 2;
+    opacity: 0.8;
+}

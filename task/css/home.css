@@ -75,16 +75,108 @@
     z-index: 2;
     opacity: 1;
 }
-.second-container {
-    background-image: linear-gradient(120deg, #FFC247, #ffc95d);
-    height: 650px;
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .full-container {
+        width: 100%; 
+        padding-left: 20px; 
+        padding-right: 20px; 
+    }
+
+    .full-set {
+        flex: 1;
+        max-width: 50%;
+        padding-left: 40px; 
+    }
+
+    .pic-section {
+        flex: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .pic-section .main-image {
+        max-width: 95%; 
+        height: auto;
+        z-index: 1;
+    }
+
+    .pic-section .overlay-image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 90%;
+        height: auto;
+        z-index: 2;
+        opacity: 1;
+    }
 }
 
+@media (min-width:480px) and (max-width: 992px) {
+    .full-container {
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .full-set {
+        max-width: 100%;
+        padding-left: 20px;
+    }
+
+    .full-set h1 {
+        font-size: 2.5rem;
+    }
+
+    .full-set p {
+        font-size: 1rem;
+    }
+
+    .button-link {
+        font-size: 0.9rem;
+    }
+
+    .pic-section {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .full-container {
+        padding: 15px;
+    }
+
+    .full-set h1 {
+        font-size: 2rem;
+    }
+
+    .full-set p {
+        font-size: 0.9rem;
+    }
+
+    .button-link {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .pic-section {
+        display: none;
+    }
+}
+
+.second-container {
+    background-image: linear-gradient(120deg, #FFC247, #ffc95d);
+    padding: 50px 20px;
+    height: auto;
+}
 
 .cards-section {
-    padding: 50px 80px;
     color: #000;
-    position: absolute;
+    position: relative;
+    text-align: center;
 }
 
 .cards-section h2 {
@@ -96,57 +188,126 @@
 .cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 15px;
+    flex-wrap: nowrap;
     margin-bottom: 40px;
 }
 
 .card {
     background: #fff;
     border-radius: 25px;
-    padding: 20px;
-    max-width: 350px;
-    box-shadow: 10px 4px 10px rgba(87, 72, 0, 0.1);
+    padding: 15px;
+    max-width: 300px;
+    box-shadow: 5px 2px 8px rgba(87, 72, 0, 0.1);
     text-align: left;
 }
 
 .card p {
-    font-size: 15px;
-    margin: 15px 15px;
-    line-height: 1.5;
+    font-size: 14px;
+    margin: 10px;
+    line-height: 1.4;
     color: #02033B;
 }
 
 .card strong {
-    font-size: 0.9rem;
-    margin: 10px 15px;
+    font-size: 0.85rem;
+    margin: 10px;
     color: #02033B;
 }
 
 .featured-logos {
     display: flex;
-    margin-left: 20px;
-    gap: 50px;
+    margin-top: 20px;
+    gap: 30px;
+    justify-content: center;
 }
 
 .featured-logos h3 {
     font-size: 1.2rem;
-    margin-top: 25px;
-    padding-right: 40px;
+    margin-bottom: 10px;
     color: #000;
 }
 
 .logos {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .logos img {
-    max-height: 75px;
-    max-width: 150px;
+    max-height: 70px;
+    max-width: 130px;
     object-fit: contain;
+}
+
+@media (max-width: 992px) {
+    .cards-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .featured-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-logos h3 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .logos img {
+        max-height: 60px;
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cards {
+        gap: 15px;
+    }
+
+    .card {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .card strong {
+        font-size: 0.8rem;
+    }
+
+    .featured-logos h3 {
+        font-size: 0.9rem;
+    }
+
+    .logos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .logos img {
+        max-height: 50px;
+        max-width: 80px;
+    }
 }
 
 .certo {
@@ -155,16 +316,30 @@
     height: 600px;
     margin-top: 0;
     color: #02033B;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .certo-container {
     display: flex;
-    padding: 80px 150px 80px 200px;
+    flex-direction: row;
+    padding: 80px 150px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.text-container {
+    flex: 1;
+}
+
+.text-content {
+    width: 80%;
 }
 
 .certo-container img {
     width: 300px;
-    margin-left: 180px;
 }
 
 .certo-container h1,
@@ -180,12 +355,15 @@
     font-size: 20px;
 }
 
-.button-container button {
-    padding: 10px;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
+.button-container {
     margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .one {
@@ -199,23 +377,19 @@
 }
 
 .image-container {
-    padding-left: 70px;
-    width: 400px;
-    /* Set the width of the container */
-    height: 400px;
-    /* Set the height of the container */
+    display: flex;
+    align-items: center;
     position: relative;
+    flex: 1;
+    gap: 2px;
+    max-width: 400px;
+
 }
 
 .image1,
 .image2 {
     position: absolute;
-    /* Enables overlapping */
-    width: 100%;
-    /* Make the images fit the container */
-    height: 100%;
     background-size: cover;
-    /* Ensures the image covers the div without stretching */
     background-repeat: no-repeat;
 }
 
@@ -225,6 +399,7 @@
     height: 350px;
     background-size: cover;
     z-index: 1;
+    justify-content: center;
 }
 
 .image2 {
@@ -233,5 +408,125 @@
     height: 330px;
     background-size: cover;
     z-index: 2;
-    opacity: 0.8;
+    opacity: 1;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .certo-container {
+        padding: 50px 30px;
+        gap: 30px;
+    }
+
+    .certo-container h1 {
+        font-size: 28px;
+    }
+
+    .certo-container p {
+        font-size: 18px;
+    }
+
+    .button-container button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .image-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .image1 {
+        width: 95%;
+        height: 95%;
+    }
+
+    .image2 {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .certo-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .certo-container h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .certo-container p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .button-container {
+        margin-left: 25%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-container button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .image-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .image1 {
+        width: 85%;
+        height: 85%;
+    }
+
+    .image2 {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .certo-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .certo-container h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .certo-container p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .text-container {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-container button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .image-container {
+        display: none;
+    }
 }

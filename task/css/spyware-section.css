@@ -1,11 +1,13 @@
-.spyware, .insights {
+.spyware,
+.insights {
     background: radial-gradient(circle, #FFFFFF 20%, #ccdaef 100%);
-    height: 1000px;
-    width: auto;   
+    height: 1100px;
+    width: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 .features {
     background-color: #ffffff;
     border-radius: 30px;
@@ -78,6 +80,95 @@
 .spy-buttons a:hover {
     opacity: 0.9;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .features {
+        padding: 20px 40px;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .feature img {
+        width: 60px;
+    }
+
+    .feature h3 {
+        font-size: 18px;
+    }
+
+    .feature p {
+        font-size: 13px;
+    }
+
+    .spy-buttons a {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .features {
+        padding: 20px 30px;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .feature img {
+        width: 50px;
+    }
+
+    .feature h3 {
+        font-size: 17px;
+    }
+
+    .feature p {
+        font-size: 12px;
+    }
+
+    .spy-buttons a {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .spyware h1 {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .features {
+        padding: 15px 20px;
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature img {
+        width: 40px;
+        margin-bottom: 10px;
+    }
+
+    .feature h3 {
+        font-size: 16px;
+    }
+
+    .feature p {
+        font-size: 12px;
+    }
+
+    .spy-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .spy-buttons a {
+        font-size: 12px;
+        padding: 8px 12px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 .help {
     background-color: white;
     height: 400px;
@@ -86,6 +177,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .help-card {
     padding: 30px 10px;
     border-radius: 25px;
@@ -97,20 +189,27 @@
     background: linear-gradient(135deg, #ffc107, #ffa500);
     color: #02033B;
 }
-.left-card h2, .right-card h2{
+
+.left-card h2,
+.right-card h2 {
     padding-left: 30px;
     padding-bottom: 20px;
 }
-.left-card p, .right-card p {
+
+.left-card p,
+.right-card p {
     padding-left: 30px;
     padding-bottom: 40px;
 }
+
 .right-card {
     background: #fff;
     color: #222;
     width: 250px;
 }
-.about-button, .help-button {
+
+.about-button,
+.help-button {
     margin-left: 30px;
     text-decoration: none;
     padding: 10px 20px;
@@ -118,18 +217,21 @@
     font-size: 14px;
     font-weight: bold;
 }
+
 .about-button {
     color: white;
     background-color: #4335DE;
     border: none;
 }
+
 .help-button {
     color: #02033B;
     background-color: white;
     border: 2px solid #02033B;
 }
+
 .help2 {
-    background:linear-gradient(#2925CC, #4B48E5);
+    background: linear-gradient(#2925CC, #4B48E5);
     height: 300px;
     color: white;
     display: flex;
@@ -137,14 +239,18 @@
     justify-content: center;
     align-items: center;
 }
-.help2 h2, .help2 p {
+
+.help2 h2,
+.help2 p {
     margin-bottom: 40px;
 }
+
 .help2-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
+
 .help2-btn {
     margin-left: 30px;
     text-decoration: none;
@@ -153,13 +259,144 @@
     font-size: 14px;
     font-weight: bold;
 }
+
 .button-yellow {
     background-color: #ffc107;
 }
+
 .button-outline {
-    background-color:  #3936ed;
+    background-color: #3936ed;
     border: 2px solid white;
     color: white;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .help {
+        flex-direction: column;
+        gap: 40px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .help-card {
+        width: 450px;
+        padding: 20px;
+    }
+
+    .help2 h2 {
+        font-size: 22px;
+    }
+
+    .help2 p {
+        font-size: 16px;
+    }
+
+    .help2-buttons {
+        gap: 10px;
+    }
+
+    .help2-btn {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .help {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .help-card {
+        width: 280px;
+        padding: 15px;
+    }
+
+    .help-card h2 {
+        font-size: 18px;
+    }
+
+    .help-card p {
+        font-size: 14px;
+    }
+
+    .about-button,
+    .help-button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .help2 h2 {
+        font-size: 20px;
+    }
+
+    .help2 p {
+        font-size: 14px;
+    }
+
+    .help2-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .help2-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .help {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        padding: 30px;
+    }
+
+    .help-card {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    .help-card h2 {
+        font-size: 16px;
+    }
+
+    .help-card p {
+        font-size: 12px;
+    }
+
+    .about-button,
+    .help-button {
+        font-size: 12px;
+        padding: 6px 10px;
+        width: 30%;
+        align-items: center;
+    }
+
+    .help2 h2 {
+        font-size: 18px;
+    }
+
+    .help2 p {
+        font-size: 12px;
+    }
+
+    .help2-buttons {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .help2-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .insights-section {
@@ -217,7 +454,7 @@
     font-weight: bold;
     border-radius: 25px;
     position: absolute;
-    top: 20px; 
+    top: 20px;
     left: 25px;
     z-index: 2;
 }
@@ -235,7 +472,7 @@
     font-size: 15px;
     color: #02033B;
     line-height: 1.6;
-    margin:20px 50px;
+    margin: 20px 50px;
 }
 
 
@@ -252,4 +489,113 @@
     position: relative;
     z-index: 1;
     border: none;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .insights-section {
+        height: auto;
+    }
+
+    .insights-container {
+        gap: 30px;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .insight-card {
+        width: 270px;
+        height: 450px;
+        padding: 15px;
+    }
+
+    .insight-card h3 {
+        font-size: 18px;
+        margin-left: 30px;
+    }
+
+    .insight-card p {
+        font-size: 14px;
+        margin: 15px 30px;
+    }
+
+    .view-all-btn {
+        padding: 10px 18px;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .insights-section {
+        height: auto;
+        padding: 10px;
+    }
+
+    .insights-container {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .insight-card {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+        padding: 15px;
+    }
+
+    .insight-card h3 {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .insight-card p {
+        font-size: 13px;
+        margin: 15px 20px;
+    }
+
+    .view-all-btn {
+        padding: 8px 15px;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .insights-section {
+        height: auto;
+        padding: 10px;
+    }
+
+    .insights-container {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .insight-card {
+        width: 100%;
+        height: 350px;
+        padding: 10px;
+    }
+
+    .card-image img {
+        height: 150px;
+    }
+
+    .insight-card h3 {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .insight-card p {
+        font-size: 12px;
+        margin: 5px 5px;
+    }
+
+    .view-all-btn {
+        padding: 8px 14px;
+        font-size: 10px;
+        margin-top: 20px;
+    }
 }

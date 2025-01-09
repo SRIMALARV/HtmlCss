@@ -3,15 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: 'Outfit';
     src: url('../fonts/Outfit-VariableFont_wght.ttf');
 }
+
 body {
     font-family: 'Outfit', sans-serif;
     background: radial-gradient(circle, #FFFFFF 20%, #ccdaef 100%);
 }
-/* Default (desktop) styles */
+
+
 .navbar {
     display: flex;
     align-items: center;
@@ -24,6 +27,7 @@ body {
     font-size: 18px;
     z-index: 1000;
     position: relative;
+    width: 100%;
 }
 
 .logo {
@@ -108,12 +112,12 @@ body {
 .signin:hover {
     background-color: #4c51bf;
 }
-/* Media Queries for Responsive Design */
-@media (max-width: 992px) {
+
+@media (min-width: 769px) and (max-width: 1024px) {
     .menu-toggle {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: baseline;
         height: 20px;
         cursor: pointer;
         margin-right: 40px;
@@ -134,9 +138,10 @@ body {
         align-items: flex-start;
         background-color: white;
         position: absolute;
+        margin-left: 0;
         top: 90px;
         left: 0;
-        width: 80%;
+        width: 100%;
         padding: 10px 0;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
@@ -150,11 +155,6 @@ body {
         padding: 10px 20px;
     }
 
-    .btn-sign {
-        margin: 10px 20px;
-        width: 100%;
-        text-align: center;
-    }
     .dropdown {
         display: none;
         position: absolute;
@@ -166,46 +166,63 @@ body {
         overflow: auto;
         z-index: 1000;
     }
+
     .dropdown a {
         color: #000080;
         padding: 10px 15px;
         display: block;
-        white-space: nowrap;
+        white-space: wrap;
     }
-    
+
     .nav-links li:hover .dropdown {
         display: block;
     }
-    
+
+    .btn-sign {
+        margin: 10px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
     .signin {
-        width:50%;
+        width: 50%;
         padding: 12px 0;
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) and (max-width: 768px) {
     .menu-toggle {
         display: flex;
         flex-direction: column;
-        align-items:normal;
+        justify-content: center;
+        align-items: center;
         height: 20px;
         cursor: pointer;
+        position: relative;
+        z-index: 1500;
+        margin-right: 20px;
     }
 
     .bar {
         display: block;
         width: 25px;
         height: 3px;
+        left: 0;
         background-color: #02033B;
         margin: 3px 0;
         transition: all 0.3s;
+        position: relative;
     }
+
     .logo {
         padding-left: 0;
     }
+
     .navbar {
         width: 100%;
+        position: relative;
     }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -217,10 +234,116 @@ body {
         width: 100%;
         padding: 10px 0;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
     }
 
     .nav-links.show {
         display: flex;
+        margin-left: 0;
+    }
+
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .btn-sign {
+        margin: 10px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        gap: 10px;
+        padding-top: 2px;
+    }
+
+    .logo img {
+        padding-left: 10px;
+        height: 53px;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        overflow: auto;
+        z-index: 1000;
+    }
+
+    .dropdown a {
+        color: #000080;
+        padding: 10px 15px;
+        display: block;
+        white-space: nowrap;
+    }
+
+    .nav-links li:hover .dropdown {
+        display: block;
+    }
+
+    .signin {
+        width: 50%;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1500;
+        margin-right: 20px;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #02033B;
+        margin: 3px 0;
+        transition: all 0.3s;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .navbar {
+        width: 100%;
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: white;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.show {
+        display: flex;
+        margin-left: 0;
     }
 
     .nav-links a {
@@ -233,6 +356,18 @@ body {
         width: 100%;
         text-align: center;
     }
+
+    .logo {
+        display: flex;
+        gap: 10px;
+        padding-top: 2px;
+    }
+
+    .logo img {
+        padding-left: 10px;
+        height: 53px;
+    }
+
     .dropdown {
         display: none;
         position: absolute;
@@ -244,19 +379,28 @@ body {
         overflow: auto;
         z-index: 1000;
     }
+
     .dropdown a {
         color: #000080;
         padding: 10px 15px;
         display: block;
         white-space: nowrap;
     }
-    
+
     .nav-links li:hover .dropdown {
         display: block;
     }
-    
+
     .signin {
-        width:50%;
+        width: 50%;
         padding: 12px 0;
+    }
+}
+
+@media (min-width: 1349px) {
+
+    .head {
+        width: 1349px;
+        margin: 0 auto;
     }
 }
